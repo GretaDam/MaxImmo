@@ -1,0 +1,19 @@
+{
+  "name": "projetnpm",
+  "version": "1.0.0",
+  "description": "projet NPM apprentissage ",
+  "main": "index.js",
+  "scripts": {
+    "scss": "sass scss/main.scss:assets/css/style.css -C --watch"
+  },
+  "keywords": [
+    "bootstrap",
+    "sass",
+    "scss"
+  ],
+  "author": "Damien",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.0.1"
+  }
+}

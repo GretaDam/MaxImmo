@@ -1,0 +1,73 @@
+@import 'partials/colors', 'partials/typos', 'partials/utilities';
+
+*, ::after, ::before {
+box-sizing: border-box;
+}
+
+body {
+    width: 80%;
+    margin:0 auto;
+}
+
+    
+nav{
+    margin-top: 40px;
+    @include flex-row-between;
+    height: 44px;
+    width: 100%;
+    align-items: center;
+    .menuLeft {
+        @include flex-row-around;
+        align-items: center;
+        height: 100%;
+        .logo{
+            @include flex-row-center;
+            .imgLogo {
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+                width: 15px;
+                height: 15px;
+                padding-right: 5px;
+            }
+            h1 {
+                @include logoFont;
+                margin:0;
+            }
+        }
+        .menu{
+            width: 318px;
+            .navLink{
+                @include flex-row-between;
+                margin:0;                    
+                li{
+                    @include agSemibold;
+                    a{color:$secondary;}
+                    a.active{
+                    @include flex-column-center;                           
+                        color: $primary;                           
+                        .activePointer {
+                            width: 12px;
+                            height: 5px;
+                            background-color: $primary;
+                            border-radius: 25%;
+                            margin-top:5px;
+                        }
+                    }
+                    a:hover{color:$primary;}
+                }
+            }
+        }
+    }
+    .menuRight {
+        .buttonEmpty {
+            @include buttonEmpty;
+        }
+    }
+}
+
+header {
+    background-image: url("./assets/img/pexels-pixabay.jpg");
+    width: 100%;
+}
