@@ -26,20 +26,31 @@
     align-items: center;
 }
 
-@mixin buttonEmpty {
-    
+@mixin button {
     @include agSemibold;
     padding: 10px 32px;
-    border: 1px solid $tertiary;
     border-radius: 4px;
+}
+
+@mixin buttonEmpty {
+    @include button;  
+    border: 1px solid $tertiary;
     a {color:$tertiary;}
 }
 
 @mixin buttonFull {
-    
-    @include agSemibold;
-    padding: 10px 32px;
-    border-radius: 4px;
+    @include button;  
     background-color: $tertiary;
     a {color:$white;}
+}
+
+input {
+    @include agSemibold;   
+    border: none;   
+}
+
+i {
+    margin:0;
+    font-size: 16px;
+    color: $primary;
 }

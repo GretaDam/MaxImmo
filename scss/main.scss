@@ -5,11 +5,17 @@ box-sizing: border-box;
 }
 
 body {
-    width: 80%;
+    width: 65%;
     margin:0 auto;
+    background-color: $neutral;
+    @include agSemibold;
 }
 
-    
+img {
+    width: 100%;
+    height: 100%;
+}
+   
 nav{
     margin-top: 40px;
     @include flex-row-between;
@@ -22,18 +28,13 @@ nav{
         height: 100%;
         .logo{
             @include flex-row-center;
+            align-items: center;
             .imgLogo {
-                img {
-                    width: 100%;
-                    height: 100%;
-                }
-                width: 15px;
-                height: 15px;
+                height:16px;
                 padding-right: 5px;
             }
             h1 {
                 @include logoFont;
-                margin:0;
             }
         }
         .menu{
@@ -68,6 +69,42 @@ nav{
 }
 
 header {
-    background-image: url("./assets/img/pexels-pixabay.jpg");
-    width: 100%;
+    margin-top: 40px;
+    border-radius: 5px;
+    background-color: white;
+    .headerTop {
+        @include flex-row-between;
+        align-items: center;
+        background-image: url("/assets/img/pexels-pixabay.jpg");
+        height: 497px;
+        padding: 45px;
+        .headerLeft {
+            width: 48%;
+            h1 {
+                @include agH1;
+                color:white;
+                span {
+                    color:$primary;
+                }           
+            }
+            p{
+                @include agLarge;
+                color:white;
+            }
+        }   
+        .headerRight {
+            width: 400px;
+            margin-bottom: 50px;
+            margin-right: 50px;
+        }
+    }
+    .headerBottom {
+        padding: 17px 40px;
+        @include flex-row-between;
+        .formSearch {
+            .keyword {
+                @include button;
+            }
+        }
+    }
 }
